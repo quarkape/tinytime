@@ -1,0 +1,27 @@
+<view class="item" wx:for="{{message}}" wx:key="index" bindtap="toMessage" data-index="{{index}}" data-title="{{item.title}}" data-postid="{{item.postid}}" data-messageid="{{item.messageid}}" data-isread="{{item.status}}">
+  <view class="date">{{item.date}}</view>
+  <view class="innerbox">
+    <view class="unread" wx:if="{{item.status==0}}"></view>
+    <view class="subject">
+      <text class="man">{{item.name}}</text>在以下话题中
+      <text class="way">{{item.type==0?"评论了你":"引用了你的评论"}}</text>
+    </view>
+    <view class="title">{{item.title}}</view>
+  </view>
+</view>
+
+<view style="height: 60rpx"></view>
+
+<!-- 信息提示层，一定时间后自动关闭 -->
+<view class="notify-model {{showNotify?'show-notify-model':''}}">
+	<view class="notify-model-inner">
+		<view class="notify-model-inner-title">{{notifyTitle}}</view>
+		<view class="notify-model-inner-detail">{{notifyDetail}}</view>
+	</view>
+</view>
+
+<!-- 当用户当前没有任何消息的时候，显示空的信息 -->
+<view class="null-data" wx:if="{{message.length==0}}">
+  <image src="{{imgUrl}}/wxbg/nulldata.png" mode="widthFix"></image>
+  <view>消息盒子空空如也</view>
+</view>

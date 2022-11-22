@@ -1,0 +1,155 @@
+page {
+  width: 90%;
+  font-size: 28rpx;
+  margin: 0 auto;
+  color: #999;
+}
+.item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.date {
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+  background-color: rgba(0, 0, 0, 0.08);
+  color: white;
+  padding: 0 10rpx;
+  border-radius: 8rpx;
+}
+  .innerbox {
+  width: 100%;
+  background-color: white;
+  border-radius: 10rpx;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.04);
+  padding: 30rpx 20rpx;
+  position: relative;
+}
+.unread {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0px;
+  height: 0px;
+  border-color: #39b54a #39b54a transparent transparent;
+  border-width: 8px 8px 8px 8px;
+  border-style: solid;
+  border-radius: 0 10rpx 0 0;
+}
+.type {
+  color: #333;
+  margin-bottom: 10rpx;
+  text-align: center;
+  font-size: 30rpx;
+}
+.detail {
+  padding: 0 14rpx;
+  box-sizing: border-box;
+}
+/* .bottomline {
+  position: relative;
+  display: inline-block;
+  margin: 30rpx 0;
+  width: 100%;
+  height: 40rpx;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  z-index: 1;
+  text-align: center;
+}
+.bottomline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1rpx;
+  border-bottom:1rpx solid rgba(233,87,63, .2);
+  top: 20rpx;
+  left: 0;
+  z-index: -1;
+}
+.bottomline text {
+  display: inline-block;
+  padding: 0 30rpx;
+  background-color: rgb(245, 247, 250);
+  z-index: 2;
+} */
+
+/* 提示框，自动消失，没有关闭按钮 */
+.notify-model {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1111;
+  opacity: 0;
+  outline: 0;
+  text-align: center;
+  -ms-transform: scale(1.185);
+  transform: scale(1.185);
+  backface-visibility: hidden;
+  perspective: 2000rpx;
+  background: rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out 0s;
+  pointer-events: none;
+}
+.notify-model::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.notify-model-inner {
+  position: relative;
+  vertical-align: middle;
+  width: 400rpx;
+  max-width: 100%;
+  overflow: hidden;
+  height: auto;
+  background-color: #f8f8f8;
+  display: inline-block;
+  border-radius: 10rpx;
+}
+.notify-model-inner-title {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #39b54a;
+  color: white;
+}
+.notify-model-inner-detail {
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  vertical-align: text-top;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  color: #666;
+}
+.show-notify-model {
+  opacity: 1;
+  transition-duration: 0.3s;
+  -ms-transform: scale(1);
+  transform: scale(1);
+  overflow-x: hidden;
+  overflow-y: auto;
+  pointer-events: auto;
+}
+.null-data {
+  position: fixed;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.null-data image {
+  width: 40%;
+  margin-bottom: 20rpx;
+}
