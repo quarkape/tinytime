@@ -42,10 +42,10 @@ App({
   // },
   globalData: {
     SESSIONID: "",
-    baseUrl: "http://172.30.194.242:8007/",
-    imgUrl: "http://172.30.194.242:8007/srcs/",
-    // baseUrl: "http://localhost:8007/",
-    // imgUrl: "http://localhost:8007/srcs/",
+    // baseUrl: "http://192.168.1.12:8007/",
+    // imgUrl: "http://192.168.1.12:8007/srcs/",
+    baseUrl: "http://localhost:8007/",
+    imgUrl: "http://localhost:8007/srcs/",
     name: wx.getStorageSync('name'),
     password: wx.getStorageSync('password'),
     isLogin: false
