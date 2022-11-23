@@ -7,6 +7,7 @@
 ### :mortar_board: 后端项目
 
 - [后端项目、SQL文件、图片资源](https://github.com/quarkape/tinytime_backend)
+- SQL文件和图片资源在后端项目的source目录下
 
 ---
 
