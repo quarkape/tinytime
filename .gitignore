@@ -1,0 +1,16 @@
+# package files
+.jar
+.war
+.ear
+target/
+
+# IDEA
+.idea/
+*.iml
+
+# idea #
+*.iml
+.idea
+
+# mini program
+.cloudbase/

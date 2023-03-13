@@ -1,0 +1,54 @@
+page {
+  width: 96%;
+  margin: 0 auto;
+  color: #666;
+  font-size: 28rpx;
+}
+.box {
+  box-sizing: border-box;
+  margin: 42rpx 0;
+}
+.item {
+  width: 100%;
+  border-radius: 14rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 34rpx;
+}
+.title {
+  font-size: 36rpx;
+  font-weight: bold;
+  padding: 14rpx 0;
+  display: inline-block;
+  position: relative;
+  color: #0081ff;
+  z-index: 1;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  height: 20rpx;
+  width: 100%;
+  background-color: #cce6ff;
+  left: 0;
+  bottom: 10rpx;
+  z-index: -1;
+}
+.content {
+  margin: 14rpx 0;
+}
+.img {
+  width: 100%;
+  height: auto;
+  max-height: 140rpx;
+  overflow: hidden;
+  margin-top: 14rpx;
+  border-radius: 14rpx;
+  opacity: 0.4;
+}
+.img image{
+  width: 100%;
+  height: auto;
+}

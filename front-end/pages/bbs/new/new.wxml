@@ -1,0 +1,69 @@
+<view wx:if="{{isNormal==true}}">
+  <!-- 标题区 -->
+  <view class="p-title">
+    <textarea maxlength="30" placeholder="标题" bindinput="getInput" data-inputid="title"></textarea>
+    <view class="title-restNum" style="color:{{title.length>40?'#E9573F':'#333'}}">{{title.length}}/40</view>
+  </view>
+
+  <!-- 文字区 -->
+  <view class="selectPic" style="background-color:\#{{pickedCustomBg=='0081ff'?'0081ff':pickedCustomBg}}">
+    <view wx:for="{{picUrls}}" wx:key="index">
+      <image src="{{picUrls[index]}}" mode="aspectFill"></image>
+    </view>
+    <textarea class="p-content" placeholder="{{placeHolders[postType]}}（1000字内）" placeholder-style="color:white" maxlength="1000" bindinput="getInput" data-inputid="content"></textarea>
+    <!-- <view class="pic-del" wx:if="{{picUrls.length!=0}}" catchtap="deletePic"></view>
+    <view class="pic-preview" wx:if="{{picUrls.length!=0}}" catchtap="previewPic"></view> -->
+  </view>
+
+  <!-- 背景选择区 -->
+  <scroll-view scroll-x class="customBg" style="width:100%">
+    <!-- 选择图片 -->
+    <view class="c-bg c-img" bindtap="selectPic"></view>
+    <!-- 选择默认图片 -->
+    <view class="c-bg" wx:for="{{defaultbg}}" wx:key="index" bindtap="pickDefaultBg" data-bgindex="{{index}}">
+      <image class="defaultbg" src="/pics/{{defaultbg[index]}}"></image>
+    </view>
+    <!-- 选择纯色背景 -->
+    <view class="c-bg" style="background-color:\#{{customBg[index]}};box-shadow:0 0 14rpx \#{{customBg[index]}}" wx:for="{{customBg}}" wx:key="index" bindtap="pickCurrentColor" data-custombg="{{customBg[index]}}"></view>
+  </scroll-view>
+
+  <view class="postbtn" hover-class="click-postbtn" bindtap="toPost">发布
+    <!-- <image src="/pics/cardBg.png" class="mbg"></image> -->
+  </view>
+
+  <!-- <view class="anonymous">
+    <checkbox checked="{{isAnonymous}}" type="checkbox" bindtap="changeCheckboxStatus"></checkbox>
+    <view class="a-txt">匿名 | <text bindtap="showAnonymousInfo">了解更多</text></view>
+  </view> -->
+
+  <!-- 展示了解关于匿名的更多信息的界面 -->
+  <!-- <view class="a-info {{isMoreInfo?'show':''}}">
+    <view class="detail">
+      <view class="closebtn" bindtap="closeSelect"></view>
+      <view class="title">匿名发布</view>
+      <view class="a-content">
+        <view>1、微论坛的详情页面不会展示发表者的详细信息，包括头衔、昵称和头像等。</view>
+        <view>2、在微论坛的详情页面进行评论时，不会显示头衔、昵称和头像等相关信息。</view>
+        <view>3、匿名发布者的相关信息在数据库可查，请严格遵守“服务协议”，对于违反服务协议的账号，将会被列入黑名单，不可再发布相关信息或者进行评论。</view>
+      </view>
+    </view>
+  </view> -->
+</view>
+
+<view class="ph"  wx:else style="position:fixed;top:0;left:0;width:100%;overflow:hidden;height:auto"><image style="width:100%;" mode="widthFix" src="{{imgUrl}}/wxbg/other/space.jpg" /></view>
+
+<!-- 信息提示层，一定时间后自动关闭 -->
+<view class="notify-model {{showNotify?'show-notify-model':''}}">
+	<view class="notify-model-inner">
+		<view class="notify-model-inner-title">{{notifyTitle}}</view>
+		<view class="notify-model-inner-detail">{{notifyDetail}}</view>
+	</view>
+</view>
+
+<!-- 加载动画 -->
+<view class="loading-model {{showLoading?'show-loading-model':''}}">
+  <view class="loading-model-inner">
+    <view class="loading-model-inner-img"><image class="loading-model-inner-img" src="{{imgUrl}}/wxbg/loading.gif"></image></view>
+    <view class="loading-model-inner-clue">片刻后完成...</view>
+  </view>
+</view>

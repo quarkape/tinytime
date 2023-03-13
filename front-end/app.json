@@ -1,0 +1,57 @@
+{
+  "pages": [
+    "pages/bbs/bbs",
+    "pages/me/instruc/instruc",
+    "pages/me/history/history",
+    "pages/me/portray/portray",
+    "pages/me/about/about", 
+    "pages/bbs/passage/passage",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/bbs/new/new",
+    "pages/login/forgetpwd/forgetpwd",
+    "pages/login/register/register",
+    "pages/me/msg/msg",
+    "pages/me/mycollect/mycollect",
+    "pages/me/mycomment/mycomment",
+    "pages/me/notify/notify",
+    "pages/me/mypost/mypost",
+    "pages/hotc/hotc"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "list": [
+      {
+        "iconPath": "pics/bbs.png",
+        "selectedIconPath": "pics/abbs.png",
+        "pagePath": "pages/bbs/bbs",
+        "text": ""
+      },
+      {
+        "iconPath": "pics/hotc.png",
+        "selectedIconPath": "pics/ahotc.png",
+        "pagePath": "pages/hotc/hotc",
+        "text": ""
+      },
+      {
+        "iconPath": "pics/me.png",
+        "selectedIconPath": "pics/ame.png",
+        "pagePath": "pages/me/me",
+        "text": ""
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "networkTimeout": {
+    "request": 10000
+  }
+}

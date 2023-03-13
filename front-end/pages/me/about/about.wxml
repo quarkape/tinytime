@@ -1,0 +1,14 @@
+<view class="box" wx:if="{{isNormal==true}}">
+  <!-- 背景装饰图片 -->
+  <view class="box-bg"><image src="{{imgUrl}}/wxbg/abouttop.png" mode="widthFix" style="width:100%"></image></view>
+  <view class="box-bg-bottom"><image src="{{imgUrl}}/wxbg/aboutbg.png" mode="widthFix" style="width:100%;display: block;"></image></view>
+  <view class="logotxt"><image src="{{imgUrl}}wxbg/logotxt.png" mode="heightFix"></image></view>
+  <view class="detail">"话题起源说"，一个有温度的话题制造机器。</view>
+  <view class="detail">包含"宇宙"和"阴阳"两个部分。</view>
+  <view class="detail">宇宙，可以（匿名）发布三种话题：吐槽，趣事和资源。话题发布后，可以点赞、评论和收藏，评论时还能够引用别人的评论。热度榜单根据近两周浏览数进行排行，您想看到的正是我们最先呈现的。在吐槽板块寻找真知灼见，在趣事板块领略风土人情，在资源板块学会海纳百川。</view>
+  <view class="detail">阴阳，每天来点儿正能量和负能量。如果被正能量冲昏了头脑，来点儿负能量让你认清现实吧~一键生成表情包并保存相册分享给他人，于是表情包里也是生活的话题~</view>
+  <view class="detail">引起一个话题，也许需要一段文字，也许只需要一张图片，也许一张表情包配上一句或激励或扎心的句子就足够了。</view>
+  <view class="detail" style="margin-top: 40rpx">——曾经的我把零碎的时光用来发呆，而现在，我用来思考，分享和交流。</view>
+</view>
+
+<!-- <view class="ph"  wx:else style="position:fixed;top:0;left:0;width:100%;overflow:hidden;height:auto"><image style="width:100%;" mode="widthFix" src="{{imgUrl}}/wxbg/other/space.jpg" /></view> -->

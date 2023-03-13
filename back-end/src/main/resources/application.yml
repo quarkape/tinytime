@@ -1,0 +1,19 @@
+spring:
+  servlet:
+    multipart:
+      max-file-size: 3MB
+      max-request-size: 60MB
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/lightme?useSSL=true&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+#    username: lightme
+#    password: lightme98
+#    url: jdbc:mysql://127.0.0.1:3324/lightme?useSSL=true&serverTimezone=UTC&charset=utf8mb4
+    driver-class-name: com.mysql.jdbc.Driver
+
+mybatis:
+  type-aliases-package: club.hue.pojo
+
+server:
+  port: 8007
