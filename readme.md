@@ -4,10 +4,15 @@
 
 ---
 
-### :mortar_board: 后端项目
+# :gear: 结果说明
 
-- [后端项目、SQL文件、图片资源](https://github.com/quarkape/tinytime_backend)
-- SQL文件和图片资源在后端项目的source目录下
+| 名称      | 内容     | 说明             |
+| --------- | -------- | ---------------- |
+| front-end | 前端项目 | 微信小程序       |
+| back-end  | 后端项目 | springboot+mysql |
+| resources | 静态资源 |                  |
+
+
 
 ---
 
