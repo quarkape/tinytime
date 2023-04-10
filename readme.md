@@ -90,10 +90,3 @@
 
   完成上述准备工作后，可以正式开始启动后端，使用微信小程序了。
 
-----
-
-### :snowman_with_snow: 联系作者
-
-- 微信：quarkape
-- QQ：2446247905
-- twitter：quarkape
